@@ -11,12 +11,16 @@
 **10-regulations-precedence.mdc — приоритет регламентов.**
 Всегда включён и говорит агенту, что `00` и `20` главнее любых других правил проекта (AGENTS.md, USER-RULES.md, memory.md, .dev.env, правила dev-standards-*, extension-patterns, forms* и другие). Нужен, если в проекте кроме наших регламентов есть старые правила: пустые `PREFIX`, `COMPANY` и `DEVELOPER` в .dev.env не отменяют префикс `ЮИ_` и баннеры, а методы расширения не называются через `Расш1_`.
 
+**40-openspec.mdc — работа по OpenSpec.**
+Нужен, если задачи ведутся через OpenSpec (команды `/opsx-explore`, `/opsx-propose`, `/opsx-apply`, `/opsx-archive`). Задаёт имя изменения по номеру задачи (например, `000272632-data-narabotki-v-zakaze`), обязательные пункты `proposal.md`, шаблон `design.md` под 1С, порядок задач в `tasks.md` и правила для `apply` и `archive`. Сами правила написания кода не повторяет: код пишется по `00` и `20`.
+
 ## Установка
 1. Скачайте правила из Git.
 2. Положите файлы в папку `.cursor/rules/` в корне проекта:
    - `00-common-dev-regulations.mdc` — всегда;
    - `10-regulations-precedence.mdc` — всегда;
-   - `20-extension-regulations.mdc` — только если в проекте есть расширение для доработок.
+   - `20-extension-regulations.mdc` — только если в проекте есть расширение для доработок;
+   - `40-openspec.mdc` — только если в проекте используется OpenSpec (после `openspec init`).
 3. Перезапускать Cursor не нужно.
 
 ## Первая задача
